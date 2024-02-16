@@ -11,7 +11,7 @@ I did not use vanilla react, and I made the assumption that Next would be fine t
 Zero balances are handled in the code that renders the conditional dashboard, however I believe with the Alchemy API it counts the ETH in your wallet as WETH, and renders this as 0. Given more time, I would implement a button to allow for toggling of showing zero balances or not. I opted to show them here so you can view more data in the dashboard and get a feel for how it looks with more content.  
 
 #### Pricing Tokens
-Given more time, I would use something like CoinGecko to fetch prices and then display them on the dashboard. I would then use the prices to update the total networth of the portfolio, and display this to the user. 
+Given more time, I would use something like CoinGecko to fetch prices and then display them on the dashboard. I would then use the prices to update the total networth of the portfolio, and display this to the user. I am assuming that the Pulsar API return pricing information already, though I am not certain this is the case. 
 
 #### Sorting
 During a refactor, I opted to remove a token sorting feature, where the user could sort their tokens by price. This was removed when I switched from fetching data on the client to the server, and I did not have enough time to put it back in. If I had more time, this would be a very good UX feature for the user. 
