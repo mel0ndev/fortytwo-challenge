@@ -11,7 +11,7 @@ export const getData = async (query?: string): Promise<Array<object> | undefined
 	} else {
 	//if (query && isAddress(query)) {
 		//TODO remove in prod, might leave for testing to make it easy 
-		const baseURL = NEXT_PUBLIC_ALCHEMY_API;
+		const baseURL = process.env.NEXT_PUBLIC_ALCHEMY_API;
 		// Data for making the request to query token balances
 		const data = JSON.stringify({
 		  jsonrpc: "2.0",
