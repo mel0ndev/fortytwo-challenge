@@ -3,15 +3,14 @@ import axios, {AxiosResponse} from "axios";
 
 
 export const getData = async (query?: string): Promise<Array<object> | undefined> => {
-	// Alchemy URL --> Replace with your API key at the end
 	let response: object[] = []
 	if (query && !isAddress(query)) {
 		response.push(Object({empty: ''})); 
 		return response; 
 	} else {
 	//if (query && isAddress(query)) {
-		//TODO remove in prod, might leave for testing to make it easy 
-		const baseURL = process.env.NEXT_PUBLIC_ALCHEMY_API;
+		const baseURL = process.env.ALCHEMY_API;
+		console.log(baseURL); 
 		// Data for making the request to query token balances
 		const data = JSON.stringify({
 		  jsonrpc: "2.0",
@@ -87,7 +86,8 @@ export const getData = async (query?: string): Promise<Array<object> | undefined
 				}
 			}
 		} catch (error) {
-			response.push(Object(error)); 
+			response.push(Object({empty: ''})); 
+			console.log(error); 
 		}
 		
 		//return undefined if address is not defined

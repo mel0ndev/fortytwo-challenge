@@ -2,7 +2,7 @@ import Input from "@/app/components/input/index";
 import Dashboard from "@/app/components/dashboard/index"; 
 import { RefreshButton } from "@/app/components/refresh/index"; 
 
-//Dashboard component will be the parent of the input and refresh components and will keep track of their state
+//since this is an SPA, we only need one page. We are, however, using the router for search params. This is the parent server component to the dashboard, and the search bar. 
 export default async function Home({
 	searchParams
 }: {
@@ -20,6 +20,7 @@ export default async function Home({
 		<div className="flex justify-center text-sm text-muted-foreground">
 			The answer to the universe.
 		</div>
+
   	    <div className="flex grid grid-cols-3">
 			<div className="flex col-span-3 justify-center">
 				<Input />

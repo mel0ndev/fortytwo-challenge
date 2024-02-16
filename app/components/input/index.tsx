@@ -4,6 +4,7 @@ import { isAddress } from "web3-validator";
 import {Input as NextInput} from "@nextui-org/react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation"; 
 
+//a client component responsible for searching for addresses
 const Input = () => {
 	//control the state of the input
 	//by default we want this to be false, and only change if interacted with
@@ -16,7 +17,7 @@ const Input = () => {
 	const pathname = usePathname(); 
 	const { replace } = useRouter(); 
 
-
+	//reads from the input, and assigns the input to the URL search params
 	const handleSearch = (term: string) => {
 		const params = new URLSearchParams(searchParams); 
 		if (term) {
