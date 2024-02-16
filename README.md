@@ -10,6 +10,9 @@ I did not use vanilla react, and I made the assumption that Next would be fine t
 #### Zero Balances 
 Zero balances are handled in the code that renders the conditional dashboard, however I believe with the Alchemy API it counts the ETH in your wallet as WETH, and renders this as 0. Given more time, I would implement a button to allow for toggling of showing zero balances or not. I opted to show them here so you can view more data in the dashboard and get a feel for how it looks with more content.  
 
+#### Chains
+This project only queries for mainnet token balances. It could easily be extended to include more chains, however to keep things simple for the scope of the project, I decided to only use mainnet token balances. 
+
 #### Pricing Tokens
 Given more time, I would use something like CoinGecko to fetch prices and then display them on the dashboard. I would then use the prices to update the total networth of the portfolio, and display this to the user. I am assuming that the Pulsar API return pricing information already, though I am not certain this is the case. 
 
