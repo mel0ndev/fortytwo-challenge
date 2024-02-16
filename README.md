@@ -23,14 +23,14 @@ Lots of changes could be made, such as animations, more loading states, and colo
 ## Setup 
 
 ### App
-This project is deployed via Vercel and can be viewed using this link: 
+This project is deployed via Vercel and can be viewed using this link: https://fortytwo-challenge.vercel.app/
 
 ### Local
 
-This project requires an Alchemy key. I can give you mine for testing if you do not have one. First, create a ``.env.local`` file in the root directory. Then, add a ``ALCHEMY_API`` variable to it, followed by your Alchemy API key. This would look like: 
+This project requires an Alchemy key. I can give you mine for testing if you do not have one. First, create a ``.env.local`` file in the root directory. Then, add a ``NEXT_PUBLIC_ALCHEMY_API`` variable to it, followed by your Alchemy API key. This would look like: 
 
 ```
-ALCHEMY_API="alchemyapikeygoeshere"
+NEXT_PUBLIC_ALCHEMY_API="alchemyapikeygoeshere"
 ```
 
 #### Getting Started
