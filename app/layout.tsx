@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider"; 
+import {NextUIProvider} from "@nextui-org/react";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="dark" suppressHydrationWarning>
+		<body className={`${poppins.className} bg-gradient-to-b from-zinc-800 from-5% bg-zinc-900 min-h-screen`}>
+		  <ThemeProvider
+			attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+		  >
+			{children}
+		  </ThemeProvider>
+	  </body>
     </html>
   );
 }
